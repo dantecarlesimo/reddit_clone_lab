@@ -1,0 +1,14 @@
+THIS IS YOUR POST
+
+<ul>
+<li><%=@post.title%></li>
+<li><%=@post.link%></li>
+</ul>
+This was posted by <%=@post.user.email %>
+
+<p>COMMENTS from others:</p>
+<% @comments.each do |comment| %>
+  <li><%= comment.title%></li>
+<% end %>
+
+<%= link_to "new comment", new_post_comment_path(@post) %>

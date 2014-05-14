@@ -1,0 +1,15 @@
+<h1>Create A New COMMENT</h1>
+
+<%= form_for([@post, @comment]) do |f| %>
+  <%= f.text_field :title, placeholder: "Name of Comment" %>
+  <%#b= f.text_field :comment, placeholder: "Add Comment" %>
+  <!-- must have code in the model to accept attributes below for a new bid -->
+  <!-- Accepts nested attributes - see Auction Model -->
+  <%#= f.fields_for :bids, @auction.bids.build do |b| %> 
+  <!-- .build and .new are the same / use either -->
+  <!-- use |b| for following because its nested into the f form -->
+  <%#= b.text_field :amount, placeholder: "Starting Bid" %>
+  <%# end %>
+  <%= f.submit %>
+
+<% end %>
